@@ -14,7 +14,7 @@ class Stack {
   }
 
   stackPeek () {
-    return this.stackPop()
+    return this.arr.length-1;
   }
 
   isEmpty () {
@@ -31,6 +31,11 @@ var resultStack = new Stack()
     resultStack.stackPush("stack two")
     resultStack.stackPush("stack three")
 
+
+
 console.log(resultStack.stackPop());
+// resultStack.print();
 console.log(resultStack.stackPeek());
+// resultStack.print();
 console.log(resultStack.isEmpty());
+// resultStack.print();
