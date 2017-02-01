@@ -46,7 +46,7 @@ class Stack {
     return this.stack[0]
 
   }
-  stacklast(){
+  stackLast(){
     return this.stack[this.stack.length -1]
   }
   print() {
@@ -66,7 +66,7 @@ console.log('stack peek : ' + tumpukanPiring.stackPeek());
 console.log('Apakah udah penuh ? ' + tumpukanPiring.isFull());
 console.log('Stack Size : ' + tumpukanPiring.stackSize());
 console.log('Stack First : ' + tumpukanPiring.stackFirst());
-console.log('Stack Last : ' + tumpukanPiring.stacklast());
+console.log('Stack Last : ' + tumpukanPiring.stackLast());
 console.log('Sedudah di pop satu : ', tumpukanPiring);
 tumpukanPiring.stackPop()
 tumpukanPiring.stackPop()
