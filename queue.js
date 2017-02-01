@@ -14,7 +14,7 @@ class Queue {
   }
 
   queuePeek(){
-    return this.arr.length-1
+    return this.arr[this.arr.length-1]
   }
 
   isEmpty(){
