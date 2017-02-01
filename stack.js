@@ -31,12 +31,12 @@ class Stack {
   }
 
   isEmpty () {
-    return this.stack.length == 0 ? true : false
+    return this.stack.length == 0
   }
 
   isFull () {
     console.log('isinya berapa ? ' + this.stack.length);
-    return this.stack.length >= this.MAX_SIZE ? true : false
+    return this.stack.length >= this.MAX_SIZE 
   }
   print() {
 
