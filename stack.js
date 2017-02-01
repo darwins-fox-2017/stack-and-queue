@@ -36,7 +36,18 @@ class Stack {
 
   isFull () {
     console.log('isinya berapa ? ' + this.stack.length);
-    return this.stack.length >= this.MAX_SIZE 
+    return this.stack.length >= this.MAX_SIZE
+  }
+  stackSize(){
+    return this.stack.length
+  }
+
+  stackFirst(){
+    return this.stack[0]
+
+  }
+  stacklast(){
+    return this.stack[this.stack.length -1]
   }
   print() {
 
@@ -53,6 +64,9 @@ console.log('Sesudah tambah data lagi : ', tumpukanPiring);
 console.log('stack peek : ' + tumpukanPiring.stackPeek());
 
 console.log('Apakah udah penuh ? ' + tumpukanPiring.isFull());
+console.log('Stack Size : ' + tumpukanPiring.stackSize());
+console.log('Stack First : ' + tumpukanPiring.stackFirst());
+console.log('Stack Last : ' + tumpukanPiring.stacklast());
 console.log('Sedudah di pop satu : ', tumpukanPiring);
 tumpukanPiring.stackPop()
 tumpukanPiring.stackPop()
