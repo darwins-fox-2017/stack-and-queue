@@ -14,7 +14,7 @@ class Stack {
   }
 
   stackPeek () {
-    return this.arr.pop()
+    return this.stackPop()
   }
 
   isEmpty () {

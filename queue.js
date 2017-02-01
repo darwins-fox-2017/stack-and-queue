@@ -14,7 +14,7 @@ class Queue {
   }
 
   queuePeek(){
-    return this.arr.shift()
+    return this.queueShift()
   }
 
   isEmpty(){
