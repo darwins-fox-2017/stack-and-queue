@@ -17,32 +17,32 @@ class Queue {
     this.maxZise=x;
     return this;
    }
- }
- stackRemove () {
-   this.data.shift();
-   return this;
+
+  stackRemove () {
+    this.data.shift();
+    return this;
  }
 
-stackPeek () {
-  let firstData=0;
+ stackPeek () {
+   let firstData=0;
   return this.data[firstData];
-}
+ }
 
-isEmpty () {
-  if (this.data.length==0) {
-    return true;
-  }else{
-    return false;
-  }
-}
+ isEmpty () {
+   if (this.data.length==0) {
+     return true;
+   }else{
+     return false;
+   }
+ }
 
-isFull(){
-  if (this.data.length==this.maxZise) {
-    return true;
-  }else{
-    return false;
-  }
-}
+ isFull(){
+   if (this.data.length==this.maxZise) {
+     return true;
+   }else{
+     return false;
+   }
+ }
 
 }
 
@@ -53,5 +53,5 @@ mydata.stackInsert(3).stackInsert('hai').stackInsert(['apa','kabar']);
 console.log(`the stack is full ? ${mydata.isFull()}`);
 console.log('data pertama : ' +mydata.stackPeek());
 mydata.stackInsert('lima');
-mydata.stackRemove().stackRemove().stackRemove(); 
+mydata.stackRemove().stackRemove().stackRemove();
 console.log(`the stack is empety ? ${mydata.isEmpty()}`);
