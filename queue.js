@@ -3,10 +3,15 @@
 class Queue {
   constructor () {
     this.arr = []
+    this.MAX_SIZE = 5
   }
 
   queueInsert(x) {
-    return this.arr.unshift(x)
+    if (this.isFull()) {
+      console.log(`queue is full, you can't add more queue`);
+    } else {
+      this.arr.unshift(x)
+    }
   }
 
   queueRemove() {
@@ -26,10 +31,10 @@ class Queue {
   }
 
   isFull() {
-    if (this.arr.length >= 5) {
-      return `queue is full, you can't add more queue`
+    if (this.arr.length >= this.MAX_SIZE) {
+      return true
     } else {
-      return this.queueInsert()
+      return false
     }
   }
 }
@@ -49,10 +54,10 @@ console.log(myQueue.queuePeek())
 console.log(myQueue.isFull());
 console.log(`The stack is empty? ${myQueue.isEmpty()}`);
 
-console.log(`removing stack: ${myQueue.queueRemove()}`);
-console.log(`removing stack: ${myQueue.queueRemove()}`);
-console.log(`removing stack: ${myQueue.queueRemove()}`);
-console.log(`removing stack: ${myQueue.queueRemove()}`);
+console.log(`removing queue: ${myQueue.queueRemove()}`);
+console.log(`removing queue: ${myQueue.queueRemove()}`);
+console.log(`removing queue: ${myQueue.queueRemove()}`);
+console.log(`removing queue: ${myQueue.queueRemove()}`);
 // console.log(myQueue);
 myQueue.queueInsert('HTML')
 console.log(myQueue.queuePeek());

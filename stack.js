@@ -41,6 +41,7 @@ class Stack {
 }
 
 let myStack = new Stack()
+
 console.log(`The stack is empty? ${myStack.isEmpty()}`);
 
 myStack.stackPush(15)
