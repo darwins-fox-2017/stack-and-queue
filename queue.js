@@ -3,10 +3,16 @@
 class Queue {
   constructor () {
     this.queueArr = []
+    this.MAXSIZE = 5
+
   }
 
   queuePush (value) {
-    this.queueArr.push(value)
+    if(this.isfull()){
+      console.log("sudah penuh");
+    }else {
+      this.queueArr.push(value)
+    }
   }
 
   queuePop () {
@@ -24,6 +30,13 @@ class Queue {
     } else {
       return "false"
     }
+  }
+
+  isfull(){
+    if (this.queueArr.length > this.MAXSIZE){
+      return true
+    }
+    return false
   }
 }
 

@@ -3,10 +3,15 @@
 class Stack {
   constructor () {
     this.stackArr = []
+    this.MAXSIZE = 5
   }
 
   stackPush (value) {
-    this.stackArr.push(value)
+    if(this.isfull()){
+      console.log("sudah penuh");
+    }else {
+      this.stackArr.push(value)  
+    }
   }
 
   stackPop () {
@@ -20,11 +25,19 @@ class Stack {
 
   isEmpty () {
     if(this.stackArr[0] === undefined){
-      return "true"
+      return true
     } else {
-      return "false"
+      return false
     }
   }
+
+  isfull(){
+    if (this.stackArr.length > this.MAXSIZE){
+      return true
+    }
+    return false
+  }
+
 }
 
 let myStack = new Stack()
