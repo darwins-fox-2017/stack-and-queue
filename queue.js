@@ -3,7 +3,7 @@
 class Queue {
   constructor (data=[]) {
     this.data=data;
-    //this.maxZise=3;
+    this.maxZise=3;
   }
   stackInsert (x) {
     if (this.data.length<this.maxZise) {
@@ -25,7 +25,9 @@ class Queue {
 
  stackPeek () {
    let firstData=0;
+   console.log("------",this.data);
   return this.data[firstData];
+
  }
 
  isEmpty () {
